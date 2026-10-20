@@ -24,7 +24,6 @@ key.classList.add("key-style");
 const keyHide = document.querySelector("#key-select");
 keyHide.classList.add("hidden-element");
 const cards = document.querySelectorAll(".key-card");
-const heading = document.querySelector(".info-container");
 const info = [
   {
     title: "event.key",
