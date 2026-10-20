@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto Mono", monospace;
+  color: #edf0f2;
+  min-height: 100vh;
+}
+
+/* NAVIGATION */
+.nav-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 50px;
+  background-color: black;
+  padding: 15px 20px 10px 0;
+  font-size: 0.8rem;
+}
+
+.left-side {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding-left: 15px;
+}
+
+.right-side {
+  display: flex;
+}
+
+.warn {
+  width: 15px;
+  height: auto;
+}
+
+/* BODY */
+.info-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.info-text {
+  display: inline-block;
+  margin: 320px auto;
+  color: #edf0f2;
+  background-color: black;
+  padding: 20px 70px;
+  border: none;
+  border-radius: 25px;
+  font-size: 2rem;
+  text-decoration: underline #9a9a19 2px;
+}
+
+.info-text:active {
+  color: #9a9a19;
+}
+
+/* CARD CONTAINER AND INFO CONTAINER */
+.key-info-container {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  gap: 50px;
+  margin: 150px 50px auto;
+  min-width: 0;
+  height: auto;
+}
+
+.key-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1 1 0;
+  background-color: #0f0f0f;
+  border-radius: 10px;
+  color: rgb(243, 238, 238);
+  box-shadow: 0 0 3px black;
+  transition: transform 0.2s ease;
+}
+
+.key-info:hover {
+  transform: translateY(-10px);
+}
+
+/* CARDS INFO */
+
+.key-info-title {
+  color: #0f0f0f;
+  width: 100%;
+  font-weight: 900;
+  text-align: center;
+  background-color: #f5f5f0;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  padding: 10px;
+}
+
+.key-pressed {
+  padding: 30px 0 0 0;
+  text-align: center;
+  width: 100%;
+  font-size: 30px;
+}
+
+.key-info-description {
+  padding: 20px 10px 20px 20px;
+}
+
+/* HIDE ELEMENT */
+.hidden-element {
+  display: none;
+}
+
+/* KEY CLICKED */
+.key-style {
+  color: black;
+  font-size: 6rem;
+  text-align: center;
+  margin-top: 60px;
+}
