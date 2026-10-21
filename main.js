@@ -1,8 +1,8 @@
 /* EVENTS */
 function keyInfo(e) {
-  heading.classList.add("hidden-element");
-  keyHide.classList.remove("hidden-element");
-  key.textContent = e.key;
+  document.querySelector(".info-container").classList.add("hidden-element");
+  document.querySelector("#key-select").classList.remove("hidden-element");
+  key.textContent = e.key === " " ? "SPACE" : e.key;
   cards.forEach((card, index) => {
     card.querySelector(".key-info-title").textContent = info[index].title;
     card.querySelector(".key-pressed").textContent = info[index].keyValue(e);
@@ -13,21 +13,22 @@ function keyInfo(e) {
 
 function toggleBack(e) {
   if (e.key === " ") {
-    heading.classList.remove("hidden-element");
-    keyHide.classList.add("hidden-element");
+    document
+      .querySelector(".info-container")
+      .classList.remove("hidden-element");
+    document.querySelector("#key-select").classList.add("hidden-element");
   }
 }
 
 /* SELECTORS */
 const key = document.querySelector("#key");
 key.classList.add("key-style");
-const keyHide = document.querySelector("#key-select");
-keyHide.classList.add("hidden-element");
+document.querySelector("#key-select").classList.add("hidden-element");
 const cards = document.querySelectorAll(".key-card");
 const info = [
   {
     title: "event.key",
-    keyValue: (e) => e.key,
+    keyValue: (e) => (e.key === " " ? "SPACE" : e.key),
     description:
       "Returns a string representing the logical character or function name produced by the key press.",
   },
